@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dave Store</title>
+        <style>
+            section{
+                background-color: azure;
+                padding: 10px;
+            }
+            table, th, td{
+                border: 1px dashed palevioletred;
+            }
+            td, th{
+                width: 150px;
+            }
+            button{
+                border: 2px solid rgb(24, 125, 134);
+                background-color: azure;
+                padding: 5px;
+                margin: 2px;
+                border-radius: 3px;
+            }
+            body{
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+            }
+            .sectionContainer{
+                max-width: 950px;
+                margin: 10px auto;
+            }
+            .labelSeparator{
+                width: 100px;
+            }
+            .inputLabelSeparator{
+                display: flex;
+                padding: 3px 1px;
+            }
+            .breaker{
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="sectionContainer">
+            <form action="https://www.google.com" target="_blank" method="get">
+                <fieldset>
+                    <legend>Invoice Details</legend>
+                    <section>
+                        <div class="inputLabelSeparator">
+                            <div class="labelSeparator">
+                                <label for="invoiceTo">Invoice To:</label>
+                            </div>
+                            <input type="text" id="invoiceTo" name="invoiceTo">
+                        </div>
+                        <div class="inputLabelSeparator">
+                            <div class="labelSeparator">
+                                <label for="contactNumber">Contact #:</label>
+                            </div>
+                            <input type="number" maxlength="14" id="contactNumber" name="contactNumber">
+                        </div>
+                        <div class="inputLabelSeparator">
+                            <div class="labelSeparator">
+                                <label for="date">Date:</label>
+                            </div>
+                            <input type="date" id="date" name="date">
+                        </div>
+                        <div class="table">
+                            <table>
+                                <thead>
+                                        <th>Item Description</th>
+                                        <th>Qty</th>
+                                        <th>Unit Price</th>
+                                        <th>Amount</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <textarea name="firstrowItem" id="firstrowItem" cols="40" rows="1" maxlength="100"></textarea>
+                                        </td>
+                                        <td><input name="firstrowQuantity" type="number"></td>
+                                        <td><input name="firstrowPrice" type="number"></td>
+                                        <td><input name="firstrowAmount" type="number"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <textarea name="secondrowItem" id="secondrowItem" cols="40" rows="1" maxlength="100"></textarea>
+                                        </td>
+                                        <td><input name="secondrowQuantity" type="number"></td>
+                                        <td><input name="secondrowPrice" type="number"></td>
+                                        <td><input name="secondrowAmount" type="number"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <textarea name="thirdrowItem" id="thirdrowItem" cols="40" rows="1" maxlength="100"></textarea>
+                                        </td>
+                                        <td><input name="thirdrowQuantity" type="number"></td>
+                                        <td><input name="thirdrowPrice" type="number"></td>
+                                        <td><input name="thirdrowAmount" type="number"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <textarea name="fourthrowItem" id="fourthrowItem" cols="40" rows="1" maxlength="100"></textarea>
+                                        </td>
+                                        <td><input name="fourthrowQuantity" type="number"></td>
+                                        <td><input name="fourthrowPrice" type="number"></td>
+                                        <td><input name="fourthrowAmount" type="number"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" style="text-align: right;" name="subTotal">Sub Total</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" style="text-align: right;" name="vatValue">VAT</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" style="text-align: right;" name="total">Total</td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </fieldset>
+                <div class="breaker"></div>
+                <fieldset>
+                    <legend>Additional Details</legend>
+                    <section>
+                        <div class="inputLabelSeparator">
+                            <div class="labelSeparator">
+                                <label for="paymentMethodSelect">Payment Method</label>
+                            </div>
+                            <select name="paymentMethodSelect" id="paymentMethodSelect">
+                                <option value="gCash">GCash</option>
+                                <option value="payMaya">PayMaya</option>
+                                <option value="bpi">BPI</option>
+                            </select>
+                        </div>
+                        <div style="display: flex">
+                            <div class="inputLabelSeparator">
+                                <input type="radio" id="homeOption" name="setupOption" value="homeOption">
+                                <label for="homeOption">Home</label>
+                            </div>
+                            <div class="inputLabelSeparator">
+                                <input type="radio" id="officeOption" name="setupOption" value="officeOption">
+                                <label for="officeOption">Office</label>
+                            </div>
+                        </div>
+                        <textarea 
+                            name="address" 
+                            cols="40" 
+                            rows="4" 
+                            maxlength="500" 
+                            placeholder="Add address details..."
+                            style="padding: 10px"
+                        ></textarea>
+                    </section>
+                </fieldset>
+                <button>
+                    Submit
+                </button>
+            </form>
+        </div>
+    </body>
+</html>
