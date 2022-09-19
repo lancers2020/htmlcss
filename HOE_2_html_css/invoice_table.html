@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, td{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+                <th>Item Description</th>
+                <th>Qty</th>
+                <th>Unit Price</th>
+                <th>Amount</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <textarea name="firstrowItem" id="firstrowItem" cols="40" rows="1" maxlength="100" placeholder="Description 1"></textarea>
+                </td>
+                <td><input name="firstrowQuantity" type="number" placeholder="1"></td>
+                <td><input name="firstrowPrice" type="number" placeholder="2"></td>
+                <td><input name="firstrowAmount" type="number" placeholder="2"></td>
+            </tr>
+            <tr>
+                <td>
+                    <textarea name="secondrowItem" id="secondrowItem" cols="40" rows="1" maxlength="100" placeholder="Description 2"></textarea>
+                </td>
+                <td><input name="secondrowQuantity" type="number"></td>
+                <td><input name="secondrowPrice" type="number"></td>
+                <td><input name="secondrowAmount" type="number"></td>
+            </tr>
+            <tr>
+                <td>
+                    <textarea name="thirdrowItem" id="thirdrowItem" cols="40" rows="1" maxlength="100" placeholder="Description 3"></textarea>
+                </td>
+                <td><input name="thirdrowQuantity" type="number"></td>
+                <td><input name="thirdrowPrice" type="number"></td>
+                <td><input name="thirdrowAmount" type="number"></td>
+            </tr>
+            <tr>
+                <td>
+                    <textarea name="fourthrowItem" id="fourthrowItem" cols="40" rows="1" maxlength="100" placeholder="Description 4"></textarea>
+                </td>
+                <td><input name="fourthrowQuantity" type="number"></td>
+                <td><input name="fourthrowPrice" type="number"></td>
+                <td><input name="fourthrowAmount" type="number"></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align: right;" name="subTotal">Sub Total</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align: right;" name="vatValue">VAT (12%)</td>
+                <td>0.24</td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align: right;" name="total">Total</td>
+                <td>2.24</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
