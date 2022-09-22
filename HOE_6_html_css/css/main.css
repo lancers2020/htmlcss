@@ -1,0 +1,172 @@
+body{
+    margin: 0;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+nav{
+    background-color: rgb(88, 84, 137);
+    padding: 15px;
+    border-bottom: 3px solid rgb(106, 21, 125);
+}
+nav>ul{
+    list-style: none;
+    display: flex;
+    /* background-color: green; */
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+
+}
+
+/* all about burger */
+
+.burger{
+    display: none;
+    position: relative;
+    z-index: 1;
+    user-select: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.burger:hover span:nth-child(2){
+	transform: translateX(9px);
+    transition-duration: .3s;
+    background-color: rgb(116, 250, 255);
+}
+.burger:hover span:nth-child(1){
+    transform: translateY(-4px);
+    transition-duration: .3s;
+}
+.burger:hover span:nth-child(3){
+    transform: translateY(4px);
+    transition-duration: .3s;
+}
+
+.burger.is-active span:nth-child(1){
+    transform: translate(-3px, 10px) rotate(45deg);
+    transition-duration: .3s;
+}
+.burger.burger.is-active span:nth-child(2){
+    opacity: 0;
+    transform: translateX(-15px);
+}
+.burger.is-active span:nth-child(3){
+    transform: translate(-3px, -7px) rotate(-45deg);
+    transition-duration: .3s;
+}
+.burger.is-active:hover span{
+    background-color: rgb(197, 104, 255);
+}
+
+/* all about media query */
+
+@media only screen and (min-width: 1260px){
+    nav>ul{
+        width: 550px;
+    }
+}
+@media only screen and (max-width: 1260px){
+    nav>ul{
+        width: 44%;
+    }
+}
+@media only screen and (max-width: 970px){
+    nav>ul{
+        width: 410px;
+    }
+}
+@media only screen and (max-width: 760px){
+    nav>ul{
+        width: 38%;
+    }
+    nav>ul>li{
+        display: none;
+    }
+    .burger{
+        display: block;
+        margin-left: 30px;
+    }
+    /* this is for the default view */
+    .burger span:nth-child(2){
+        transform: translateX(-10px);
+        transition-duration: .3s;
+        background-color: rgb(255, 255, 255);
+    }
+    .burger span:nth-child(1){
+        transform: translateX(-10px);
+        transition-duration: .3s;
+    }
+    .burger span:nth-child(3){
+        transform: translateX(-10px);
+        transition-duration: .3s;
+    }
+    .burger span{
+        display: block;
+        width: 33px;
+        height: 3px;
+        margin-bottom: 5px;
+        position: relative;
+        background-color: white;
+        z-index: 1;
+        transform: 0.4s;
+    }
+}
+nav>ul>li>a{
+    text-decoration: none;
+    /* background-color: blue; */
+    font-size:large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    /* border: 2px solid aliceblue; */
+    border-radius: 10px;
+    padding: 5px;
+    color: white;
+}
+nav>ul>li>a.is-active{
+    background-color: white;
+    color: rgb(88, 84, 137)
+}
+nav>ul>li>a:hover{
+    background-color: white;
+    color: rgb(88, 84, 137);
+}
+
+.page-wrapper{
+    margin-top: 120px;
+}
+
+/* navbar-mobile */
+#mobile{
+    display: none;
+}
+#mobile.is-mobile{
+    display: block;
+    z-index: 2;
+    background-color: rgb(188, 157, 209);
+    padding: 20px 20px;
+    font-size: x-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 165px;
+}
+#mobile>div>a{
+    text-decoration: none;
+    color: white;
+    transition-duration: .3s;
+}
+#mobile>div>a:hover{
+    color: rgb(200, 219, 255);
+    font-size: xx-large;
+    transition-duration: .3s;
+}
