@@ -149,16 +149,27 @@ nav>ul>li>a:hover{
 
 /* navbar-mobile */
 #mobile{
-    display: none;
-}
-#mobile.is-mobile{
     display: block;
+    position: fixed;
+    left: -300px;
+
     z-index: 2;
     background-color: rgb(188, 157, 209);
     padding: 20px 20px;
     font-size: x-large;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 165px;
+    opacity: 0.97;
+    letter-spacing: 2px;
+    transition-duration: .3s;
+}
+#mobile.is-quit{
+    display: none;
+}
+#mobile.is-mobile{
+    width: 100%;
+    transition-duration: .3s;
+    transform: translateX(300px);
 }
 #mobile>div>a{
     text-decoration: none;
