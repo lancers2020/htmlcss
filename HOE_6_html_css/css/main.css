@@ -37,16 +37,9 @@ nav>ul{
     margin: 0;
     padding: 0;
 }
-.burger span{
-    display: block;
-    width: 33px;
-    height: 3px;
-    margin-bottom: 5px;
-    position: relative;
-    background-color: white;
-    z-index: 1;
-    transform: 0.4s;
-}
+
+
+
 .burger:hover span:nth-child(2){
 	transform: translateX(9px);
     transition-duration: .3s;
@@ -81,28 +74,53 @@ nav>ul{
 
 @media only screen and (min-width: 1260px){
     nav>ul{
-        width: 700px;
+        width: 550px;
     }
 }
 @media only screen and (max-width: 1260px){
     nav>ul{
-        width: 57%;
+        width: 44%;
     }
 }
-@media only screen and (max-width: 960px){
+@media only screen and (max-width: 970px){
     nav>ul{
-        width: 500px;
+        width: 410px;
     }
 }
 @media only screen and (max-width: 760px){
     nav>ul{
-        width: 54%;
+        width: 38%;
     }
     nav>ul>li{
         display: none;
     }
     .burger{
         display: block;
+        margin-left: 30px;
+    }
+    /* this is for the default view */
+    .burger span:nth-child(2){
+        transform: translateX(-10px);
+        transition-duration: .3s;
+        background-color: rgb(255, 255, 255);
+    }
+    .burger span:nth-child(1){
+        transform: translateX(-10px);
+        transition-duration: .3s;
+    }
+    .burger span:nth-child(3){
+        transform: translateX(-10px);
+        transition-duration: .3s;
+    }
+    .burger span{
+        display: block;
+        width: 33px;
+        height: 3px;
+        margin-bottom: 5px;
+        position: relative;
+        background-color: white;
+        z-index: 1;
+        transform: 0.4s;
     }
 }
 nav>ul>li>a{
@@ -127,4 +145,28 @@ nav>ul>li>a:hover{
 
 .page-wrapper{
     margin-top: 120px;
+}
+
+/* navbar-mobile */
+#mobile{
+    display: none;
+}
+#mobile.is-mobile{
+    display: block;
+    z-index: 2;
+    background-color: rgb(188, 157, 209);
+    padding: 20px 20px;
+    font-size: x-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 165px;
+}
+#mobile>div>a{
+    text-decoration: none;
+    color: white;
+    transition-duration: .3s;
+}
+#mobile>div>a:hover{
+    color: rgb(200, 219, 255);
+    font-size: xx-large;
+    transition-duration: .3s;
 }
