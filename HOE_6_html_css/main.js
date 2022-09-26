@@ -9,12 +9,3 @@ quit.addEventListener('click', function(){
     mobile.classList.remove('is-mobile');
     burger.classList.remove('is-active');
 })
-
-// function mobileNav(){
-//     const nav = document.getElementById('mobile');
-//     nav.classList.toggle('is-mobile');
-// }
-// function mobileNavQuit(){
-//     const quit = document.getElementsByClassName('page-wrapper');
-//     quit.classList.toggle('quit');
-// }

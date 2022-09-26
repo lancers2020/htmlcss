@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav class="navBar">
+            <ul>
+                <li><a href="#" class="is-active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Experience</a></li>
+                <li><a href="#">Contact Me</a></li>
+            </ul>
+            <button class="burger" onclick="mobileNav()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+        <div id="mobile">
+            <div><a href="#">Home</a></div>
+            <div><a href="#">About</a></div>
+            <div><a href="#">Portfolio</a></div>
+            <div><a href="#">Experience</a></div>
+            <div><a href="#">Contact Me</a></div>
+        </div>
+    </header>
+    <div class="page-wrapper">
+        <section id="section1">
+            <div id="section1-parent-container" class="container-fluid p-0" style="position: relative; overflow: hidden;">
+                    <img 
+                        src="src/pictures/geometry.jpg" 
+                        alt="cover-photo" 
+                        width="1600px" 
+                        height="400px"
+                        style="position: relative; margin-top: 0;"
+                    >
+                    <div class="profile-parent-container d-flex justify-content-center">
+                        <div id="profile-child-container" class="d-flex justify-content-around">
+                            <div class="profile-details-container">
+                                <h1>Dave C. Limutin</h1>
+                                <h2>Fullstack Web Developer</h2>
+                            </div>
+                            <div 
+                                class="card"
+                                style="width: 14rem; height: 14rem; border: 2px dashed seashell; position: relative; overflow: hidden"
+                            >
+                                <img 
+                                    src="src/pictures/profile2.webp" 
+                                    alt="selfie" 
+                                    height="200" 
+                                    width="200"
+                                    style="margin: auto auto; position: relative;"
+                                >
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </section>
+        <section class="section2">
+            <div id="about-parent-container" class="p-4 pt-5" style="background-color: rgb(9, 7, 26);">
+                <div class="card mx-4 my-2" style="opacity: .7;">
+                    <h2 class="text-center mt-5">About Me</h2>
+                    <p class="m-3">
+                        I'm a FullStack Web Developer enthusiast, and I am inspired to apply all of
+                        my skills from my previous bootcamps to every project that I make. And such
+                        skills that are from different fields are Networking, Linux, Front-end 
+                        and back-end web development, and effective communication. I'm also an 
+                        AWS re/Start graduate myself, but nowdays, at least recently, I've been
+                        spending my time honing my skills which are more focused on Fullstack Web Dev.
+
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="section3">
+            <div class="container-fluid p-5" style="background-color: rgb(9, 7, 26);">
+                <div class="card pb-4" style="background-color: rgb(255, 255, 255, .7);">
+                    <h1 class="text-center text-dark mt-5">My Portfolio</h1>
+                    <div class="d-flex justify-content-around mt-5">
+                        <div style="width: 300px;min-height: 300px;background-color: white;" class="card p-3">
+                            uwu uwuuuu uUwwWu UWU uwu uwuuuu uUwwWu UWU uwu uwuuuu uUwwWu UWU uwu uwuuuu uUwwWu UWU
+                            uwu uwuuuu uUwwWu UWU uwu uwuuuu uUwwWu UWU uwu uwuuuu uUwwWu UWU uwu uwuuuu uUwwWu UWU
+                            uwu uwuuuu uUwwWu UWU? uwu uwuuuu uUwwWu UWU uwu uwuuuu uUwwWu UWU
+                            uwu uwuuuu uUwwWu UWU uwu uwuuuu uUwwWu? UWU uwu uwuuuu uUwwWu UWU uwu uwuuuu uUwwWu UWU?
+                            uwu uwuuuu uUwwWu UWU uwu uwuuuu.
+                        </div>
+                        <div style="width: 300px;background-color: white;" class="card p-3">
+                            uwu uwuuuu uUwwWu UWU uwu uwuuuu? uUwwWu UWU uwu uwuuuu uUwwWu UWU uwu uwuuuu uUwwWu UWU
+                            uwu uwuuuu uUwwWu UWU uwu uwuuuu uUwwWu UWU uwu uwuuuu? uUwwWu UWU uwu uwuuuu uUwwWu UWU.
+                        </div>
+                        <div style="width: 300px;background-color: white;" class="card p-3">
+                            uwu uwuuuu uUwwWu UWU uwu uwuuuu uUwwWu UWU uwu uwuuuu uUwwWu UWU uwu uwuuuu uUwwWu UWU
+                            uwu uwuuuu uUwwWu? UWU uwu uwuuuu uUwwWu UWU uwu uwuuuu uUwwWu UWU uwu uwuuuu uUwwWu UWU
+                            uwu uwuuuu uUwwWu UWU uwu uwuuuu uUwwWu UWU uwu uwuuuu uUwwWu UWU uwu uwuuuu uUwwWu UWU
+                            uwu uwuuuu uUwwWu UWU uwu uwuuuu uUwwWu? UWU uwu uwuuuu uUwwWu UWU.
+                        </div>
+                        <div style="width: 300px;background-color: white;" class="card p-3">
+                            uwu uwuuuu uUwwWu UWU uwu uwuuuu uUwwWu UWU uwu uwuuuu uUwwWu UWU.
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-around mt-5">
+                        <div style="width: 300px;min-height: 300px;background-color: white;" class="card p-3">
+                            uwu uwuuuu uUwwWu UWU uwu uwuuuu uUwwWu UWU uwu uwuuuu uUwwWu UWU uwu uwuuuu uUwwWu UWU
+                            uwu uwuuuu uUwwWu UWU uwu uwuuuu? uUwwWu UWU uwu uwuuuu uUwwWu UWU.
+                        </div>
+                        <div style="width: 300px;background-color: white;" class="card p-3">
+                            uwu uwuuuu uUwwWu UWU uwu uwuuuu uUwwWu UWU uwu uwuuuu? uUwwWu UWU uwu uwuuuu uUwwWu UWU
+                            uwu uwuuuu uUwwWu UWU uwu uwuuuu uUwwWu UWU uwu uwuuuu uUwwWu UWU uwu uwuuuu uUwwWu UWU
+                            uwu uwuuuu uUwwWu UWU uwu? uwuuuu uUwwWu UWU.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
