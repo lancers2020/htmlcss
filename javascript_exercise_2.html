@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            padding: 5px;
+            border: 2px dashed burlywood;
+            font-family: cursive;
+            font-size: 20px;
+        }
+        button{
+            padding: 15px;
+            border: 5px solid rgb(23, 69, 116);
+            font-size: 20px;
+            font-family: cursive;
+            font-weight: bold;
+            height: 30px;
+            line-height: 0;
+        }
+        button:hover{
+            padding: 20px;
+            border: none;
+            background-color: black;
+            color: white;
+        }
+        #number1{
+            margin-bottom: 5px;
+        }
+        div{
+            font-size: 5rem;
+        }
+    </style>
+</head>
+<body>
+    <input id="number2" type="text" placeholder="input a random letter" maxlength="1">
+    <button onclick="vowelOrCon()">click me</button>
+    <div id="show2"></div>
+    <input type="number" id="num1" placeholder="input a number">
+    <input type="number" id="num2" placeholder="input a number">
+    <div>
+        <button id="plus" value="plus" onclick="calculator('+')">+</button>
+        <button id="minus" value="minus" onclick="calculator('-')">-</button>
+        <button id="multi" value="multi" onclick="calculator('*')">*</button>
+        <button id="divide" value="divide" onclick="calculator('/')">/</button>
+        <button id="equals" value="equals" onclick="calculator('=')">=</button>
+    </div>
+    <div id="show3"></div>
+</body>
+
+<script>
+    let method;
+    function vowelOrCon(){
+        let a = (document.getElementById('number2').value).toLowerCase();
+        switch(a){
+            case "a":
+            case "e":
+            case "i":
+            case "o":
+            case "u":
+                document.getElementById('show2').innerHTML = "the letter is vowel";
+                break;
+            default:
+                document.getElementById('show2').innerHTML = "the letter is consonant";
+                break;
+        }
+    }
+    function calculator(method){
+        let a = parseInt(document.getElementById('num1').value);
+        let b = parseInt(document.getElementById('num2').value);
+        switch(method){
+            case "+":
+                var result = a + b;
+                document.getElementById('show3').innerHTML= "total: " + result;
+                console.log('working');
+                break;
+            case "-":
+                var result = a - b;
+                document.getElementById('show3').innerHTML= "total: " + result;
+                console.log('working');
+                break;
+            case "*":
+                var result = a * b;
+                document.getElementById('show3').innerHTML= "total: " + result;
+                console.log('working');
+                break;
+            case "/":
+                var result = a / b;
+                document.getElementById('show3').innerHTML= "total: " + result;
+                console.log('working');
+                break;
+            default:
+                var result = "nothing to do here";
+                document.getElementById('show3').innerHTML= "total: " + result;
+                console.log('working');
+                break;
+        }
+    }
+    function add(){
+        method = "addition";
+    }
+    function minus(){
+        method = "subtraction";
+    }
+    function multi(){
+        method = "multiplication";
+    }
+    function divide(){
+        method = "division";
+    }
+    function equals(){
+        method = "equals";
+    }
+</script>
+</html>
