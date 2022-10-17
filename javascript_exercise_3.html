@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .list{
+            display: flex;
+            justify-content: space-evenly;
+            gap: 5px;
+            padding: 5px;
+            background-color: rgb(242, 209, 165);
+            font-size: 40px;
+            font-family: cursive;
+            border-radius: 3px;
+        }
+        .show{
+            padding: 10px;
+            font-size: 20px;
+            font-family: cursive;
+        }
+        button{
+            margin: 10px 0;
+            background-color: white;
+        }
+        button:hover{
+            background-color: black;
+            color: white;
+        }
+        .list-parent>h2{
+            text-align: center;
+            font-size: 25px;
+            color: white;
+            background-color: black;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="list-parent">
+        <h2>List of Employees</h2>
+        <div id="list1" class="list" onload="eventHandlerList()">
+        </div>
+    </div>
+    <button onclick="eventHandlerUwu()">
+        click me
+    </button>
+    <div id="show1" class="show"></div>
+    <div id="show2" class="show"></div>
+</body>
+<script>
+    let data;
+    let namesForAge = [];
+    let namesForSpanish = [""];
+    let staff = [
+        {name: "Oliver Queen", title: "CEO", gender: "male", age: 38, languages: ["english", "spanish"]}, 
+        {name: "Ben Hur", title: "Security consultant", gender: "male", age: 25, languages: ["latin", "italian"]}, 
+        {name: "Jessica Alba", title: "Admin Assistant", gender: "female", age: 23, languages: ["english", "spanish"]}, 
+        {name: "Pepper Piper", title: "Quality Assurance", gender: "female", age: 32, languages: ["english", "spanish"]},
+        {name: "Red Sullivan", title: "Project Manager", gender: "male", age: 27, languages: ["russian", "english"]},
+        {name:"Juan Dela Cruz", title: "Manager", age: 24, gender: "male", languages: ["russian", "french"]},
+        {name:"Anna Salvador", title: "Junior Dev", age: 21, gender: "female", languages: ["english", "french"]},
+        {name:"Mark Bautista", title: "Senior Fullstack Dev", age: 28, gender: "male", languages: ["russion", "spanish"]},
+        {name:"Micheal Garcia", title: "CEO", age: 40, gender: "male", languages: ["english", "latin"]}
+    ];
+    function eventHandlerUwu(){
+        data = getter(staff);
+        console.log("age: " + data[0]);
+        console.log("spanish: " + data[1]);
+        
+        document.getElementById('show1').innerHTML = "Employees aged more than 30 years old: " + data[0] + " : ";
+        document.getElementById('show2').innerHTML = "Employees who speak spanish: " + data[1] + " : ";
+
+        for(var i = 0; i < data[2].length; i++){
+            namesForAge.push(data[2][i]);
+            // console.log("here");
+            document.getElementById('show1').innerHTML += data[2][i] + ", ";
+        }
+        for(var i = 0; i <data[3].length;i++){
+            namesForSpanish.push(data[3][i]);
+            // console.log("here");
+            document.getElementById('show2').innerHTML += data[3][i] + ", ";
+        }
+    }
+    for(var i = 0; i < staff.length; i++){
+        document.getElementById('list1').innerHTML += staff[i].name + ", ";
+    }
+</script>
+<script src="./js_ex_3.js"></script>
+</html>
