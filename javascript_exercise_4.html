@@ -5,8 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #label1{
+            display: flex;
+            justify-content: space-evenly;
+            gap: 5px;
+            padding: 5px;
+            background-color: rgb(242, 209, 165);
+            font-size: 40px;
+            font-family: cursive;
+            border-radius: 3px;
+        }
+        .show{
+            padding: 10px;
+            font-size: 20px;
+            font-family: cursive;
+        }
+        button{
+            margin: 10px 0;
+            background-color: white;
+        }
+        button:hover{
+            background-color: black;
+            color: white;
+        }
+    </style>
 </head>
 <body>
+    <div id="label1" class="label"></div>
     <button onclick="eventHandler()">
         js exercise 4
     </button>
@@ -29,6 +55,9 @@
             document.getElementById('show2').innerHTML += triplicates[i];
         }
     }
+    for(var i = 0; i < numbers.length; i++){
+            document.getElementById('label1').innerHTML += numbers[i] + ", ";
+        }
 </script>
 <script src="./js_ex_4.js"></script>
 </html>
