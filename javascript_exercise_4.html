@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="eventHandler()">
+        js exercise 4
+    </button>
+    <div id="show1" class="show"></div>
+    <div id="show2" class="show"></div>
+</body>
+<script>
+    let duplicates;
+    let tripple;
+    let numbers = [1, 1, 2, 2, 2, 3, 3, 4, 5, 5, 5, 6, 6, 7, 7, 7, 8, 9, 9, 9];
+    function eventHandler(){
+        duplicates = getterDuplicate(numbers);
+        document.getElementById('show1').innerHTML = "duplicates: "
+        for(var i = 0; i < duplicates.length; i++){
+            document.getElementById('show1').innerHTML += duplicates[i];
+        }
+        triplicates = getterTriplicate(numbers);
+        document.getElementById('show2').innerHTML = "triplicates: ";
+        for(var i = 0; i < triplicates.length; i++){
+            document.getElementById('show2').innerHTML += triplicates[i];
+        }
+    }
+</script>
+<script src="./js_ex_4.js"></script>
+</html>
