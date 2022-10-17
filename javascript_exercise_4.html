@@ -38,6 +38,9 @@
     </button>
     <div id="show1" class="show"></div>
     <div id="show2" class="show"></div>
+    <div id="show3" class="show">
+
+    </div>
 </body>
 <script>
     let duplicates;
@@ -57,7 +60,40 @@
     }
     for(var i = 0; i < numbers.length; i++){
             document.getElementById('label1').innerHTML += numbers[i] + ", ";
-        }
+    }
+
+    let setOfNumber = [23,34,56,34,5,8,11,43];
+    document.getElementById('show3').innerHTML = "<select>";
+        let highestNumber = 0;
+        let low = 0;
+        setOfNumber.forEach(function(value, index, array){
+            // for(var i = 0; i < index; i++){
+            //     if(setOfNumber[i+1] > setOfNumber[highestNumber]){
+            //         highestNumber = i+1;
+            //     }
+            // }
+            // for(var i = 0; i < index; i++){
+            //     if(setOfNumber[i+1] < setOfNumber[low]){
+            //         low = i+1;
+            //     }
+            // }
+
+            if(index == 0){
+                highestNumber = value;
+                low = value;
+            }
+            if(highestNumber < value){
+                highestNumber = value;
+            }
+            if(low > value){
+                low = value;
+            }
+        });
+        // document.getElementById('show3').innerHTML += "<option>" + setOfNumber[highestNumber] + "</option>";
+        // document.getElementById('show3').innerHTML += "<option>" + setOfNumber[low] + "</option>";
+        document.getElementById('show3').innerHTML += "<br>" + "highest: " + highestNumber + "<br>";
+        document.getElementById('show3').innerHTML += "lowest: " + low + "<br>";
+    document.getElementById('show3').innerHTML += "</select>";
 </script>
 <script src="./js_ex_4.js"></script>
 </html>
