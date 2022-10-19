@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #label1{
+            display: flex;
+            justify-content: space-evenly;
+            gap: 5px;
+            padding: 5px;
+            background-color: rgb(242, 209, 165);
+            font-size: 40px;
+            font-family: cursive;
+            border-radius: 3px;
+        }
+        .show{
+            padding: 10px;
+            font-size: 20px;
+            font-family: cursive;
+        }
+        button{
+            margin: 10px 0;
+            background-color: white;
+        }
+        button:hover{
+            background-color: black;
+            color: white;
+        }
+        .table{
+            font-family: cursive;
+            font-size: 20px;
+            padding: 5px;
+            width: fit-content;
+            background-color: rgb(121, 118, 163);
+            border-radius: 5px;
+        }
+        .tr{
+            background-color: rgb(199, 191, 241);
+        }
+        .td, .th{
+            padding: 5px;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+    uwu
+    <input type="number" id="input-1">
+    <button onclick="eventHandler()">click me</button>
+    <div id="show-1" class="show"></div>
+
+    <div id="show-2" class="table"></div>
+</body>
+<script>
+    let result;
+    function eventHandler(){
+        result = sevenGenerator(document.getElementById('input-1').value);
+        document.getElementById('show-1').innerHTML = result;
+    }
+
+    let invoiceItems = [{description: "Mouse", Qty: 3, unitPrice: 200}, 
+                {description: "Keyboard", Qty: 3, unitPrice: 400},
+                {description: "Monitor", Qty: 6, unitPrice: 5400},
+                {description: "CPU Tower Case", Qty: 3, unitPrice: 1200},
+                {description: "Headset", Qty: 3, unitPrice: 500},
+                {description: "UPS", Qty: 1, unitPrice: 4000}
+    ];
+    let tableElement = "<div><table class='table'>";
+        tableElement += "<tr class='tr'>";
+                    tableElement += "<th class='th'>Description</th>";
+                    tableElement += "<th class='th'>Qty</th>";
+                    tableElement += "<th class='th'>Unit Price</th>";
+        tableElement += "</tr>";
+        invoiceItems.forEach(element => {
+            tableElement += "<tr class='tr'>";
+            tableElement += "<td class='td'>" + element.description + "</td>";
+            tableElement += "<td class='td'>" + element.Qty + "</td>";
+            tableElement += "<td class='td'>" + element.unitPrice + "</td>";
+            tableElement += "</tr>"
+        });
+    document.getElementById('show-2').innerHTML += tableElement + "</table></div>";
+</script>
+<script src="./js_ex_5.js"></script>
+</html>
