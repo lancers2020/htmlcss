@@ -53,6 +53,7 @@
     <div id="show-1" class="show"></div>
 
     <div id="show-2" class="table"></div>
+    <div id="show-3" class="show"></div>
 </body>
 <script>
     let result;
@@ -82,6 +83,18 @@
             tableElement += "</tr>"
         });
     document.getElementById('show-2').innerHTML += tableElement + "</table></div>";
+
+    let quote = "To know how much there is to know is the beginning of learning to live.";
+    let lotto = [18,9,54,36,45,27];
+    let sample = lotto.shift().toExponential();
+
+    let testing;
+    document.getElementById('show-3').innerHTML += quote.match(/the/g).length;
+    document.getElementById('show-3').innerHTML += "<br/>";
+    document.getElementById('show-3').innerHTML += sample;
+    document.getElementById('show-3').innerHTML += "<br/>";
+    document.getElementById('show-3').innerHTML += lotto.join("<br/>");
+
 </script>
 <script src="./js_ex_5.js"></script>
 </html>

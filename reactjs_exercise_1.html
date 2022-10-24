@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="show1"></div>
+</body>
+<script>
+    class Furniture{
+        constructor(name, color){
+            this.name = name;
+            this.color = color;
+        }
+    }
+    class Table extends Furniture{
+        constructor(shape, legs, name, color){
+            super(name, color);
+            this.shape = shape;
+            this.legs = legs;
+        }
+        getDetails(){
+            return "item: " + this.name + ",\tcolor: " + this.color + ",\tshape: " + this.shape + ",\tlegs: " + this.legs;
+        }
+    }
+    class Sofa extends Furniture{
+        constructor(size, coating, name, color){
+            super(name, color);
+            this.size = size;
+            this.coating = coating;
+        }
+        getDetails(){
+            return "item: " + this.name + ",\tcolor: " + this.color + ",\tsize: " + this.size + ",\tcoating: " + this.coating;
+        }
+    }
+
+    const tableDetails = ["table", "red", "round", 1];
+    const table = new Table(tableDetails[2], tableDetails[3], tableDetails[0], tableDetails[1]);
+
+    const sofaDetails = ["sofa", "white", "large", "silk"];
+    const sofa = new Sofa(sofaDetails[2], sofaDetails[3], sofaDetails[0], sofaDetails[1]);
+
+    document.getElementById('show1').innerHTML = "<p>" + table.getDetails() + "</p>";
+    document.getElementById('show1').innerHTML += "<p>" + sofa.getDetails() + "</p>";
+</script>
+</html>
